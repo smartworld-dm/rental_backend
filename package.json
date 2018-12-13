@@ -1,0 +1,56 @@
+{
+  "name": "heroku-cra-node",
+  "version": "1.0.0",
+  "description": "How to use create-react-app with a custom Node API on Heroku",
+  "engines": {
+    "node": "6.11.2",
+    "npm": "3.10.10"
+  },
+  "scripts": {
+    "start": "node server",
+    "dev": " npm run start && cd react-ui/ && npm run start",
+    "heroku-postbuild": "cd react-ui/ && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+  },
+  "cacheDirectories": [
+    "node_modules",
+    "react-ui/node_modules"
+  ],
+  "dependencies": {
+    "async": "^2.6.1",
+    "axios": "^0.18.0",
+    "bcrypt-nodejs": "*",
+    "bluebird": "^3.5.3",
+    "body-parser": "*",
+    "cors": "^2.8.4",
+    "crypto": "^1.0.1",
+    "express": "*",
+    "express-flash": "0.0.2",
+    "express-session": "^1.15.6",
+    "jade": "^1.11.0",
+    "jwt-simple": "*",
+    "mongoose": "*",
+    "morgan": "*",
+    "multer": "^1.4.1",
+    "nodemailer": "^4.6.7",
+    "nodemon": "*",
+    "passport": "*",
+    "passport-jwt": "*",
+    "passport-local": "*",
+    "react-interactive": "^0.8.1",
+    "react-search-input": "^0.11.3",
+    "simple-line-icons": "^2.4.1",
+    "socket.io": "^2.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mars/heroku-cra-node.git"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "create-react-app",
+    "react"
+  ],
+  "license": "MIT",
+  "devDependencies": {}
+}
